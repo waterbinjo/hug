@@ -1,0 +1,201 @@
+/* layout */
+body {
+    background-image: url(../img/pattern.png);
+}
+
+#header {
+    width: 100%;
+    /* background-color: #ececec; */
+    border-bottom: 1px solid #a5a5a5;
+    background-color: #fff;
+    
+    /* 스크롤해도 header 고정 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100; /* z-index 숫자는 아무거나 넣어도 됨 */
+    box-shadow: 0 3px 3px #0000006c;
+}
+#main {
+    width: 100%;
+    padding-top: 97px;
+    /* header가 고정되면서 main이 밀려 올라가니까 padding으로 main을 밀려주기 
+    이때 patting값은 header의 hight값*/
+}
+.container {
+    width: 1357px;
+    margin: 0 auto;
+    /* background-color: #c1ebff; */
+}
+
+/************ header ************/
+.header_inner {
+    height: 97px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo {
+    margin-bottom: 6px;
+}
+#nav {
+}
+#nav ul {
+    display: flex;
+}
+#nav ul li {
+}
+#nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    /* font-size: 16px; */
+    font-weight: 500;
+}
+#nav ul li a:hover {
+    color: #a5a5a5;
+}
+
+.menu_box {
+    display: flex;
+    align-items: center;
+}
+.menu_box span.totalmenu {
+    /* background-image: url(../img/bar.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    아래가 축약형 */
+    background: url(../img/bar.jpg) no-repeat 0 5px;
+    padding-left: 18px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+.menu_box .search_box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu_box .search_box input {
+    width: 180px;
+    height: 30px;
+    border: 1px solid #a5a5a5;
+    padding-left: 10px;
+}
+.menu_box .search_box button {
+    width: 30px;
+    height: 30px;
+    background: url(../img/icon.jpg) no-repeat center center;
+    
+    /*** 버튼 글자 안보이게 하는 법 ***/
+    /* 없애면 안됨. 왜? 웹 접근성 때문에. */
+    /* text-indent: -10000px; */
+    /* text-indent 들여쓰기를 마이너스로 많이 주기. 플러스로 주면 가로스크롤이 생김 안됨. */
+    /* 또는 reset.css에 ir에 초기화값 입력 해놨으니 버튼 spaen에 class로 이름 ir로 지정 <-권장⭐ */
+}
+
+/************ main ************/
+.main_inner {
+    display: flex;
+}
+.left_content, .right_content {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 315px;
+    /* height: 687px; */
+    background-color: #a1a0a0;
+    color: #fff;
+}
+.center_content {
+    width: 727px;
+    /* height: 687px; */
+}
+
+/* left_content, right_content */
+.left_box01, .left_box02, .right_box01, .right_box02 {
+    width: 315px;
+    height: 314px;
+    padding: 48px 0 0 34px;
+
+    position: relative;
+    /* box_img 좌표의 시작점 지정 */
+}
+.left_box03, .right_box03 {
+    width: 158px;
+    height: 59px;
+}
+.left_box04, .right_box04 {
+    width: 157px;
+    height: 59px;
+}
+.text_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* content color */
+.left_box01 {background: #d03e4b;}
+.left_box02 {background: #e2e0d4;}
+.left_box03 {background: #b2aea2;}
+.left_box04 {background: #d0ccc0;}
+.right_box01 {background: #414a69;}
+.right_box02 {background: #66575a;}
+.right_box03 {background: #59464a;}
+.right_box04 {background: #423235;}
+
+/* 일부의 color만 변경 */
+.brown {
+    color: #423235;
+}
+
+/* detail */
+.sub_title {
+    font-size: 17px;
+    letter-spacing: -1px;
+}
+.title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 2px;
+}
+.box_title {
+    font-size: 14px;
+    letter-spacing: -1px;
+    margin-top: 15px;
+
+    border: 1px solid #fff;
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.box_img {
+    position: absolute;
+    right: 36px;
+    bottom: 20px;
+}
+
+.title02 {
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+.sub_title02 {
+    margin-top: 8px;
+    font-size: 15px;
+    letter-spacing: -1px;
+}
+.arrow_img {
+    position: absolute;
+    left: 38px;
+    bottom: 126px;
+}
+.dot_img {
+    position: absolute;
+    right: 33px;
+    top: 36px;
+}
+.hug_img {
+    position: absolute;
+    right: 33px;
+    bottom: 30px;
+}
